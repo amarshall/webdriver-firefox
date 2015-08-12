@@ -12,7 +12,7 @@ module Selenium
         def launch
           find_free_port
           create_profile
-          start_silent_and_wait
+          respond_to?(:start_silent_and_wait) and start_silent_and_wait
           start
           connect_until_stable
 
